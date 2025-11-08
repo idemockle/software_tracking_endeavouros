@@ -7,7 +7,6 @@ AUR:
   - heroic-games-launcher-bin
   - google-chrome
   - snapd
-  - testing1
 pacman:
   - thunderbird
   - steam:
