@@ -1,0 +1,76 @@
+# Update all: yay -Syu
+# Install: yay -Su <program>
+# Uninstall: yay -Rsn <program>
+AUR:
+  - enpass-bin
+  - visual-studio-code-bin
+  - heroic-games-launcher-bin
+  - google-chrome
+  - snapd
+
+pacman:
+  - thunderbird
+  - steam:
+    - vulkan-radeon
+    - lib32-vulkan-radeon
+  - mangohud
+  - keepassxc
+  - Python Build Dependencies: |
+      base-devel openssl zlib xz tk zstd
+  - jdk-openjdk
+  - git-credential-manager:
+      setup:
+        - git-credential-manager configure
+        - Go to ~/.gitconfig and change the first "helper =" line to "helper = libsecret"
+        - Install kwalletmanger on KDE to manage credentials through a GUI
+
+# sudo snap install <program>
+# sudo snap remove <program>
+snap:
+  - bruno
+
+heroic:
+  - Redout 2
+
+dotnet:
+  git-credential-manager:
+    installation:
+      dotnet tool install -g git-credential-manager
+    removal:
+      dotnet tool uninstall -g git-credential-manager
+
+self-managed:
+  - Ryujinx:
+      location: '~'
+  - Emulator games:
+      location: '~/Documents/emulation'
+  - auto-cpufreq:
+      location: '~'
+      installation: |
+        git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+        cd auto-cpufreq && sudo ./auto-cpufreq-installer
+      removal: |
+        cd ~/auto-cpufreq && sudo ./auto-cpufreq-installer
+        # Enter "R"
+  - GE-Proton:
+      location: ~/.steam/steam/compatibilitytools.d/
+      installation: https://github.com/GloriousEggroll/proton-ge-custom?tab=readme-ov-file#native
+  - Joplin:
+      installation: |
+        wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+      removal: |
+        rm -rf ~/.config/.joplin
+        rm -rf ~/.joplin
+        rm ~/.local/share/applications/appimagekit-joplin.desktop
+  - pyenv:
+      location: ~/.pyenv
+
+configurations:
+  - Fix time mismatch between Windows and Linux in Dual Boot: |
+      timedatectl set-local-rtc 1 --adjust-system-clock
+  - Automatically clean pacman cache once a week: |
+      # In /etc/conf.d/pacman-contrib:
+      PACCACHE_ARGS='-k1' # (leaves last version of any cached package)
+
+      # Enable Service
+      systemctl enable paccache.timer
