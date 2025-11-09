@@ -21,12 +21,15 @@ pacman:
       setup:
         - git-credential-manager configure
         - Go to ~/.gitconfig and change the first "helper =" line to "helper = libsecret"
-        - Install kwalletmanger on KDE to manage credentials through a GUI
+        - Install kwalletmanager on KDE to manage credentials through a GUI
+  - kwalletmanager
+  - dotnet-runtime-8.0
 
 # sudo snap install <program>
 # sudo snap remove <program>
 snap:
   - bruno
+  - postman
 
 heroic:
   - Redout 2
