@@ -1,4 +1,4 @@
-# Update all: yay -Syu
+  # Update all: yay -Syu
 # Install: yay -Su <program>
 # Uninstall: yay -Rsn <program>
 AUR:
@@ -61,7 +61,8 @@ self-managed:
       installation: |
         wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
       removal: |
-        rm -rf ~/.config/.joplin
+        rm -rf ~/.config/Joplin
+        rm -rf ~/.config/joplin-desktop
         rm -rf ~/.joplin
         rm ~/.local/share/applications/appimagekit-joplin.desktop
   - pyenv:
