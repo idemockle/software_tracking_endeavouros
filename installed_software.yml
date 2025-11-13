@@ -1,4 +1,4 @@
-  # Update all: yay -Syu
+# Update all: yay -Syu
 # Install: yay -Su <program>
 # Uninstall: yay -Rsn <program>
 AUR:
