@@ -24,6 +24,7 @@ pacman:
         - Install kwalletmanager on KDE to manage credentials through a GUI
   - kwalletmanager
   - dotnet-runtime-8.0
+  - discord
 
 # sudo snap install <program>
 # sudo snap remove <program>
