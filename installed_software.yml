@@ -80,11 +80,11 @@ self-managed:
         - iptables-nft is newer and should work as a drop-in replacement for iptables, so I uninstalled iptables-nft, installed iptables, then ran the .run file
         - After the install succeeded, I removed iptables and reinstalled iptables-nft
         - commands: |
-          sudo pacman -Rdd iptables-nft
-          sudo pacman -S iptables
-          ./pia-linux-3.7-08412.run 
-          sudo pacman -Rdd iptables
-          sudo pacman -S iptables-nft
+            sudo pacman -Rdd iptables-nft
+            sudo pacman -S iptables
+            ./pia-linux-3.7-08412.run 
+            sudo pacman -Rdd iptables
+            sudo pacman -S iptables-nft
 
 configurations:
   - Fix time mismatch between Windows and Linux in Dual Boot: |
