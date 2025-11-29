@@ -25,6 +25,7 @@ pacman:
   - kwalletmanager
   - dotnet-runtime-8.0
   - discord
+  - spotify-launcher
 
 # sudo snap install <program>
 # sudo snap remove <program>
