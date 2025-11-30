@@ -35,6 +35,12 @@ snap:
   - bruno
   - postman
 
+# flatpak install <program>
+# flatpak uninstall <program>
+# flatpak update
+flatpak:
+  - bottles
+
 steam:
   - Horizon Forbidden West
   - 'Redout: Enhanced Edition'
