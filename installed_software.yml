@@ -28,6 +28,7 @@ pacman:
   - discord
   - spotify-launcher
   - flatpak
+  - lutris
 
 # sudo snap install <program>
 # sudo snap remove <program>
