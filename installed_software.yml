@@ -28,7 +28,8 @@ pacman:
   - discord
   - spotify-launcher
   - flatpak
-  - lutris
+  - UNINSTALLED:
+    - lutris
 
 # sudo snap install <program>
 # sudo snap remove <program>
@@ -37,10 +38,11 @@ snap:
   - postman
 
 # flatpak install <program>
-# flatpak uninstall <program>
+# flatpak uninstall --delete-data <program>
 # flatpak update
 flatpak:
-  - bottles
+  UNINSTALLED:
+    - bottles
 
 steam:
   - Horizon Forbidden West
