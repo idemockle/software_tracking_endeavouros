@@ -41,7 +41,7 @@ snap:
 # flatpak uninstall --delete-data <program>
 # flatpak update
 flatpak:
-  UNINSTALLED:
+  - UNINSTALLED:
     - bottles
 
 steam:
