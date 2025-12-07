@@ -16,6 +16,7 @@ pacman:
   - mangohud:
       Single Game Steam Config: MANGOHUD=1 MANGOHUD_CONFIG=cpu_temp,gpu_temp %command%
       Start Steam with mangohud: mangohud steam
+  - goverlay: manages mangohud config
   - keepassxc
   - Python Build Dependencies: |
       base-devel openssl zlib xz tk zstd
