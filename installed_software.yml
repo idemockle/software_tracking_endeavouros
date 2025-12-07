@@ -13,7 +13,8 @@ pacman:
   - steam:
     - vulkan-radeon
     - lib32-vulkan-radeon
-  - mangohud
+  - mangohud:
+      steamconfig: MANGOHUD=1 MANGOHUD_CONFIG=cpu_temp,gpu_temp %command%
   - keepassxc
   - Python Build Dependencies: |
       base-devel openssl zlib xz tk zstd
